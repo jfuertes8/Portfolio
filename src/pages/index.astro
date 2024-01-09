@@ -1,45 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import HeaderLink from "../components/HeaderLink.astro";
-import SocialLink from "../components/SocialLink.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import LeftSideInfo from "../components/LeftSideInfo.astro";
+import NavBar from "../components/NavBar.astro";
 ---
 
 <Layout title="Portfolio | Javier Fuertes">
 	<main class="flex w-[1500px] m-auto pt-20">
 		<div class="flex-3 p-10">
-			<img
-				src="/javier-img.jpg"
-				alt="profile of javier"
-				class="rounded-full"
-				width="100"
-			/>
-			<h1 class="font-bold text-4xl mb-5 mt-7 leading-relaxed">
-				Hello!<br /> I'm Javier Fuertes
-			</h1>
-			<p class="w-[500px] leading-8 text-medium">
-				Digital Analyst at ING. Frontend developer wannabe, with
-				personal experience in React, React Native and Lit, and
-				intermediate design skills with pure CSS and frameworks such as
-				Bootstrap or Tailwind.
-			</p>
-			<div class="flex mt-20 gap-6">
-				<SocialLink href="https://github.com/jfuertes8">
-					<i class="fa-brands fa-github"></i> Github
-				</SocialLink>
-				<SocialLink href="https://medium.com/@fuertesjavier1">
-					<i class="fa-brands fa-medium"></i> Medium
-				</SocialLink>
-				<SocialLink href="https://linkedin.com/in/fuertesjavier1">
-					<i class="fa-brands fa-linkedin"></i> Linkedin
-				</SocialLink>
-			</div>
+			<LeftSideInfo />
 		</div>
 		<div class="flex-2">
-			<ul class="flex gap-16 text-lg mb-10">
-				<li><HeaderLink href="/index">Projects</HeaderLink></li>
-				<li><HeaderLink href="/contact">Contact</HeaderLink></li>
-			</ul>
+			<NavBar />
 			<div class="flex flex-wrap gap-5">
 				<ProjectCard
 					title="Tidy"
@@ -60,7 +33,7 @@ import ProjectCard from "../components/ProjectCard.astro";
 					projectUrl="https://github.com/jfuertes8/react-tic-tac-toe"
 				/>
 				<ProjectCard
-					title="Basic web"
+					title="Basic website"
 					description="Landing page and register form styled with Tailwind, and with JS validations."
 					codeDescription="TAILWIND / JAVASCRIPT"
 					firstLogo
@@ -70,12 +43,21 @@ import ProjectCard from "../components/ProjectCard.astro";
 				/>
 				<ProjectCard
 					title="eCommerce"
-					description="Simple shopping cart components with Lit."
+					description="Simple shopping cart and basic login components with Lit."
 					codeDescription="LIT"
 					firstLogo
 					firstLogoLink="/code-logos/lit.png"
 					alt="lit logo"
 					projectUrl="https://github.com/jfuertes8/lit-shopping-cart"
+				/>
+				<ProjectCard
+					title="Portfolio"
+					description="This very website you are looking at."
+					codeDescription="ASTRO"
+					firstLogo
+					firstLogoLink="/code-logos/astro.png"
+					alt="astro logo"
+					projectUrl="https://github.com/jfuertes8/portfolio"
 				/>
 			</div>
 		</div>

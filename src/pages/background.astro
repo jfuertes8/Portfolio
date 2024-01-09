@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LeftSideInfo from "../components/LeftSideInfo.astro";
+import NavBar from "../components/NavBar.astro";
+import BackgroundBlock from "../components/BackgroundBlock.astro";
+---
+
+<Layout title="Portfolio | Javier Fuertes">
+    <main class="flex w-[1500px] m-auto pt-20">
+        <div class="flex-3 p-10">
+            <LeftSideInfo />
+        </div>
+        <div class="flex-2">
+            <NavBar />
+            <div class="flex flex-col flex-wrap gap-5">
+                <BackgroundBlock
+                    title="Education"
+                    firstBlockTitle="International Degree in Business"
+                    firstBlockDescription="Bilingual Degree in Management, with two exchange semesters in Canada and the United States"
+                    firstBlockLocation="University of Navarra"
+                    firstBLockDate="2012 - 2016"
+                    secondBlockTitle="Web development"
+                    secondBlockDescription="Two year professional degree. Frontend and backend web development studying HTML, CSS, JavaScript, Java, SQL"
+                    secondBlockLocation="Edix"
+                    secondBLockDate="2019 - 2021"
+                />
+                <BackgroundBlock
+                    title="Work experience"
+                    firstBlockTitle="Customer Journey Analyst"
+                    firstBlockDescription="Working on the onboarding process for a new customer of the bank. Working close with UX, development team, legal, compliance..."
+                    firstBlockLocation="ING"
+                    firstBLockDate="2022 - Present day"
+                    secondBlockTitle="Digital Transformation Analyst"
+                    secondBlockDescription="Working on the bank mobile apps, introducing new features, performing manual testing and managing the app release calendar"
+                    secondBlockLocation="Openbank"
+                    secondBLockDate="2019 - 2022"
+                />
+            </div>
+        </div>
+    </main>
+</Layout>

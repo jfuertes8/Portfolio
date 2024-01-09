@@ -6,4 +6,6 @@ interface Props {
 const { href } = Astro.props;
 ---
 
-<a href={href} class="hover:underline hover:decoration-1"><slot /></a>
+<a href={href} class="px-4 py-2 rounded hover:bg-gray-100 transition-all"
+    ><slot /></a
+>

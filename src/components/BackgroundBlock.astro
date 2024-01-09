@@ -1,0 +1,59 @@
+---
+interface Props {
+    title: string;
+    firstBlockTitle: string;
+    firstBlockDescription: string;
+    firstBlockLocation: string;
+    firstBLockDate: string;
+    secondBlockTitle: string;
+    secondBlockDescription: string;
+    secondBlockLocation: string;
+    secondBLockDate: string;
+}
+
+const {
+    title,
+    firstBlockTitle,
+    secondBlockTitle,
+    firstBlockDescription,
+    firstBLockDate,
+    firstBlockLocation,
+    secondBlockDescription,
+    secondBlockLocation,
+    secondBLockDate,
+} = Astro.props;
+---
+
+<div class="w-[800px] rounded-xl bg-gray-100 p-7 border">
+    <h2 class="text-xl font-semibold mb-4">{title}</h2>
+    <div class="flex gap-10">
+        <div class="flex-1 flex flex-col justify-between">
+            <h3 class="mb-3 font-medium">{firstBlockTitle}</h3>
+            <p class="mb-10 text-sm font-light leading-relaxed">
+                {firstBlockDescription}
+            </p>
+            <p class="text-sm italic mb-2">
+                <i class="fa-solid fa-location-dot"></i>
+                {firstBlockLocation}
+            </p>
+            <p class="text-sm italic">
+                <i class="fa-solid fa-calendar-days"></i>
+                {firstBLockDate}
+            </p>
+        </div>
+        <div class="flex-1 flex flex-col">
+            <h3 class="mb-3 font-medium">{secondBlockTitle}</h3>
+            <p class="mb-10 text-sm font-light leading-relaxed">
+                {secondBlockDescription}
+            </p>
+            <p class="text-sm italic mb-2">
+                <i class="fa-solid fa-location-dot"></i>
+                {secondBlockLocation}
+            </p>
+            <p class="text-sm italic">
+                <i class="fa-solid fa-calendar-days"></i>
+                {secondBLockDate}
+            </p>
+        </div>
+    </div>
+</div>
