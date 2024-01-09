@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SocialLink from "../components/SocialLink.astro";
+import HeaderLink from "../components/HeaderLink.astro";
+import ContactButton from "../components/ContactButton.astro";
+---
+
+<Layout title="Portfolio | Javier Fuertes">
+    <main class="flex w-[1500px] m-auto pt-20">
+        <div class="flex-3 p-10">
+            <img
+                src="/javier-img.jpg"
+                alt="profile of javier"
+                class="rounded-full"
+                width="100"
+            />
+            <h1 class="font-bold text-4xl mb-5 mt-7 leading-relaxed">
+                Hello!<br /> I'm Javier Fuertes
+            </h1>
+            <p class="w-[500px] leading-8 text-medium">
+                Digital Analyst at ING. Frontend developer wannabe, with
+                personal experience in React, React Native and Lit, and
+                intermediate design skills with pure CSS and frameworks such as
+                Bootstrap or Tailwind.
+            </p>
+            <div class="flex mt-20 gap-6">
+                <SocialLink href="https://github.com/jfuertes8">
+                    <i class="fa-brands fa-github"></i> Github
+                </SocialLink>
+                <SocialLink href="https://medium.com/@fuertesjavier1">
+                    <i class="fa-brands fa-medium"></i> Medium
+                </SocialLink>
+                <SocialLink href="https://linkedin.com/in/fuertesjavier1">
+                    <i class="fa-brands fa-linkedin"></i> Linkedin
+                </SocialLink>
+            </div>
+        </div>
+        <div class="flex-2">
+            <ul class="flex gap-16 text-lg mb-10">
+                <li><HeaderLink href="/">Projects</HeaderLink></li>
+                <li><HeaderLink href="/contact">Contact</HeaderLink></li>
+            </ul>
+            <div
+                class="flex flex-col flex-wrap gap-5 justify-center items-center pl-16"
+            >
+                <img src="/contact.jpg" width="450" />
+                <h2 class="w-[400px] text-center">
+                    Feel free to contact me through whichever channel you prefer
+                </h2>
+                <div class="flex gap-10">
+                    <ContactButton
+                        imageUrl="/telephone.png"
+                        href="tel:658545912"
+                    />
+                    <ContactButton
+                        imageUrl="/email.png"
+                        href="mailto:jfuertes8@gmail.com"
+                    />
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

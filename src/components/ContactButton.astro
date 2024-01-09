@@ -1,0 +1,16 @@
+---
+interface Props {
+    href: string;
+    imageUrl: string;
+}
+
+const { href, imageUrl } = Astro.props;
+---
+
+<a
+    href={href}
+    target="_blank"
+    class="flex justify-center align-middle w-16 h-16 rounded-full bg-slate-300 items-center"
+>
+    <img src={imageUrl} class="w-7 h-7" />
+</a>

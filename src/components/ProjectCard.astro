@@ -1,0 +1,43 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    codeDescription: string;
+    firstLogo: boolean;
+    firstLogoLink: string;
+    alt: string;
+    projectUrl: string;
+}
+
+const {
+    title,
+    description,
+    codeDescription,
+    firstLogo,
+    firstLogoLink,
+    alt,
+    projectUrl,
+} = Astro.props;
+---
+
+<a
+    class="w-[280px] h-[230px] bg-gray-100 border rounded-2xl flex flex-col hover:shadow-2xl transition-all cursor-pointer"
+    href={projectUrl}
+    target="_blank"
+>
+    <div class="p-7 flex-1">
+        <h2 class="text-xl font-medium mb-3">{title}</h2>
+        <p class="text-sm font-light leading-relaxed">
+            {description}
+        </p>
+    </div>
+    <div
+        class="bg-gray-100 w-full h-[40px] py-6 pl-7 pr-5 items-center flex justify-between flex-2 rounded-b-2xl"
+    >
+        <p class="text-xs">{codeDescription}</p>
+        <div class="flex gap-2">
+            {firstLogo && <img src={firstLogoLink} alt={alt} />}
+            <img src="/code-logos/js.png" alt="javascript icon" />
+        </div>
+    </div>
+</a>
