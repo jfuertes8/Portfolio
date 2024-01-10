@@ -24,12 +24,12 @@ const {
 } = Astro.props;
 ---
 
-<div class="w-[800px] rounded-xl bg-gray-100 p-7 border">
+<div class="md:w-[800px] w-full rounded-xl bg-gray-100 p-7 border">
     <h2 class="text-xl font-semibold mb-4">{title}</h2>
-    <div class="flex gap-10">
-        <div class="flex-1 flex flex-col justify-between">
+    <div class="flex md:flex-row flex-col gap-10">
+        <div class="flex-1 flex flex-col justify-between md:mb-0 mb-7">
             <h3 class="mb-3 font-medium">{firstBlockTitle}</h3>
-            <p class="mb-10 text-sm font-light leading-relaxed">
+            <p class="md:mb-10 mb-3 text-sm font-light leading-relaxed">
                 {firstBlockDescription}
             </p>
             <p class="text-sm italic mb-2">
@@ -43,7 +43,7 @@ const {
         </div>
         <div class="flex-1 flex flex-col">
             <h3 class="mb-3 font-medium">{secondBlockTitle}</h3>
-            <p class="mb-10 text-sm font-light leading-relaxed">
+            <p class="md:mb-10 mb-3 text-sm font-light leading-relaxed">
                 {secondBlockDescription}
             </p>
             <p class="text-sm italic mb-2">
