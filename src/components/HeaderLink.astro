@@ -1,16 +1,13 @@
 ---
 interface Props {
     href: string;
-    active: boolean;
 }
 
-const { href, active } = Astro.props;
+const { href } = Astro.props;
 ---
 
 <a
     href={href}
-    class={active
-        ? "px-4 py-2 rounded hover:bg-gray-100 transition-all bg-gray-100 text-sm md:text-base"
-        : "px-4 py-2 rounded hover:bg-gray-100 transition-all text-sm md:text-base"}
+    class={"px-4 py-2 rounded hover:bg-slate-500 transition-all text-sm md:text-base"}
     ><slot /></a
 >

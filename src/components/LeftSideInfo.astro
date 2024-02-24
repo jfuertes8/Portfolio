@@ -2,29 +2,33 @@
 import SocialLink from "./SocialLink.astro";
 ---
 
-<img
-    src="/javier-img.jpg"
-    alt="profile of javier"
-    class="rounded-full"
-    width="100"
-/>
-<h1 class="font-bold md:text-4xl text-3xl mb-5 mt-7 leading-relaxed">
-    Hello!<br /> I'm Javier Fuertes
-</h1>
-<p class="md:w-[500px] w-full md:leading-8 leading-6 md:text-medium text-sm">
-    Digital Analyst at ING. Frontend developer wannabe, with personal experience
-    in React, React Native and Lit, and intermediate design skills with pure CSS
-    and frameworks such as Bootstrap or Tailwind.
-</p>
-<div class="flex gap-5"></div>
-<div class="flex mt-20 gap-6 md:justify-start justify-center">
-    <SocialLink href="https://github.com/jfuertes8">
-        <i class="fa-brands fa-github"></i> Github
-    </SocialLink>
-    <SocialLink href="https://medium.com/@fuertesjavier1">
-        <i class="fa-brands fa-medium"></i> Medium
-    </SocialLink>
-    <SocialLink href="https://linkedin.com/in/fuertesjavier1">
-        <i class="fa-brands fa-linkedin"></i> Linkedin
-    </SocialLink>
+<div class="flex flex-col items-center">
+    <img
+        src="/javier-img.jpg"
+        alt="profile of javier"
+        class="rounded-full"
+        width="100"
+    />
+    <h1 class="md:text-4xl text-3xl mb-2 mt-7 leading-relaxed text-center">
+        Business, code and design. <br />
+        <span class="font-bold">All in one.</span>
+    </h1>
+    <div class="flex gap-6 my-5 justify-center">
+        <SocialLink href="https://github.com/jfuertes8">
+            <i class="fa-brands fa-github"></i>
+        </SocialLink>
+        <SocialLink href="https://medium.com/@fuertesjavier1">
+            <i class="fa-brands fa-medium"></i>
+        </SocialLink>
+        <SocialLink href="https://linkedin.com/in/fuertesjavier1">
+            <i class="fa-brands fa-linkedin"></i>
+        </SocialLink>
+    </div>
+    <p
+        class="md:w-[650px] w-full md:leading-8 leading-6 md:text-lg text-sm text-center"
+    >
+        Digital Analyst at ING. Frontend developer wannabe, with personal
+        experience in React, React Native and Lit, and intermediate design
+        skills with pure CSS and frameworks such as Bootstrap or Tailwind.
+    </p>
 </div>

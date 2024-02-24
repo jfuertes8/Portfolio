@@ -1,65 +1,125 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import HeaderLink from "../components/HeaderLink.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import LeftSideInfo from "../components/LeftSideInfo.astro";
 import NavBar from "../components/NavBar.astro";
+import BlockTitle from "../components/BlockTitle.astro";
+import BackgroundBlock from "../components/BackgroundBlock.astro";
 ---
 
 <Layout title="Portfolio | Javier Fuertes">
-	<main class="flex md:flex-row flex-col container md:pt-20 p-5">
-		<div class="flex-3 md:p-10 p-5 mb-4">
+	<main class="flex-col container">
+		<NavBar />
+		<div class="p-10 bg-slate-800 text-yellow-50">
 			<LeftSideInfo />
 		</div>
-		<hr class="mb-7 md:hidden" />
-		<div class="flex-2">
-			<NavBar active1 active2={false} active3={false} />
-			<div class="flex flex-col md:flex-row flex-wrap gap-5">
-				<ProjectCard
-					title="Tidy"
-					description="A mobile app frontend for a clothe organizing idea."
-					codeDescription="REACT NATIVE"
-					firstLogo={false}
-					firstLogoLink=""
-					alt=""
-					projectUrl="https://github.com/jfuertes8/tidy"
+
+		<div>
+			<div class="w-[1200px] m-auto pb-10">
+				<BlockTitle title="My Projects" id="projects" />
+				<div class="flex flex-row flex-wrap gap-3">
+					<ProjectCard
+						title="Tidy"
+						description="A mobile app frontend for a clothe organizing idea."
+						codeDescription="REACT NATIVE"
+						firstLogoLink="/code-logos/react.png"
+						alt=""
+						projectUrl="https://github.com/jfuertes8/tidy"
+					/>
+					<ProjectCard
+						title="Tic Tac Toe"
+						description="The typical tic tac toe game made with React."
+						codeDescription="REACT"
+						firstLogoLink="/code-logos/react.png"
+						alt=""
+						projectUrl="https://github.com/jfuertes8/react-tic-tac-toe"
+					/>
+					<ProjectCard
+						title="Basic website"
+						description="Landing page and register form styled with Tailwind, and with JS validations."
+						codeDescription="TAILWIND"
+						firstLogoLink="/code-logos/tailwind.png"
+						alt="tailwind logo"
+						projectUrl="https://github.com/jfuertes8/world-travel"
+					/>
+					<ProjectCard
+						title="eCommerce"
+						description="Simple shopping cart and basic login components with Lit."
+						codeDescription="LIT"
+						firstLogoLink="/code-logos/lit.png"
+						alt="lit logo"
+						projectUrl="https://github.com/jfuertes8/lit-shopping-cart"
+					/>
+					<ProjectCard
+						title="Portfolio"
+						description="This very website you are looking at."
+						codeDescription="ASTRO"
+						firstLogoLink="/code-logos/astro.png"
+						alt="astro logo"
+						projectUrl="https://github.com/jfuertes8/portfolio"
+					/>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-white pb-10">
+			<div class="w-[1200px] m-auto">
+				<BlockTitle title="My Background" id="background" />
+				<BackgroundBlock
+					title="Education"
+					firstBlockTitle="International Degree in Business"
+					firstBlockDescription="Bilingual Degree in Management, with two exchange semesters in Canada and the United States"
+					firstBlockLocation="University of Navarra"
+					firstBLockDate="2012 - 2016"
+					secondBlockTitle="Web development"
+					secondBlockDescription="Two year professional degree. Frontend and backend web development studying HTML, CSS, JavaScript, Java, SQL"
+					secondBlockLocation="Edix"
+					secondBLockDate="2019 - 2021"
+					ThirdBlockTitle="UX/UI design master's degree"
+					ThirdBlockDescription="Master's degree in UX design. From user research, persona, archetypes, mocks and final designs. Both desktop and app experiences."
+					ThirdBlockLocation="EDIT Digital Education Bootcamp"
+					ThirdBLockDate="2017 - 2018"
 				/>
-				<ProjectCard
-					title="Tic Tac Toe"
-					description="The typical tic tac toe game made with React."
-					codeDescription="REACT"
-					firstLogo={false}
-					firstLogoLink=""
-					alt=""
-					projectUrl="https://github.com/jfuertes8/react-tic-tac-toe"
+				<hr class="my-16" />
+				<BackgroundBlock
+					title="Work experience"
+					firstBlockTitle="Customer Journey Analyst"
+					firstBlockDescription="Working on the onboarding process for a new customer of the bank. Working close with UX, development team, legal, compliance..."
+					firstBlockLocation="ING"
+					firstBLockDate="2022 - Present day"
+					secondBlockTitle="Digital Transformation Analyst"
+					secondBlockDescription="Working on the bank mobile apps, introducing new features, performing manual testing and managing the app release calendar"
+					secondBlockLocation="Openbank"
+					secondBLockDate="2019 - 2022"
+					ThirdBlockTitle="Customer Experience Analyst"
+					ThirdBlockDescription="Analyzing the experience the clients had with the company through surveys, elaborating reports and presenting results to the Business Units."
+					ThirdBlockLocation="CEPSA S.L.U"
+					ThirdBLockDate="2018 - 2019"
 				/>
-				<ProjectCard
-					title="Basic website"
-					description="Landing page and register form styled with Tailwind, and with JS validations."
-					codeDescription="TAILWIND / JAVASCRIPT"
-					firstLogo
-					firstLogoLink="/code-logos/tailwind.png"
-					alt="tailwind logo"
-					projectUrl="https://github.com/jfuertes8/world-travel"
-				/>
-				<ProjectCard
-					title="eCommerce"
-					description="Simple shopping cart and basic login components with Lit."
-					codeDescription="LIT"
-					firstLogo
-					firstLogoLink="/code-logos/lit.png"
-					alt="lit logo"
-					projectUrl="https://github.com/jfuertes8/lit-shopping-cart"
-				/>
-				<ProjectCard
-					title="Portfolio"
-					description="This very website you are looking at."
-					codeDescription="ASTRO"
-					firstLogo
-					firstLogoLink="/code-logos/astro.png"
-					alt="astro logo"
-					projectUrl="https://github.com/jfuertes8/portfolio"
-				/>
+			</div>
+		</div>
+
+		<div class="bg-slate-900 text-yellow-50">
+			<div class="w-[1200px] m-auto py-16">
+				<h2 class="text-5xl font-extralight leading-tight mb-3">
+					<i class="fa-solid fa-heart"></i><br />LIKE WHAT YOU HAVE
+					SEEN?
+				</h2>
+				<p class="text-lg mb-5">We can chat...</p>
+				<div class="flex gap-5">
+					<a
+						href="mailto:jfuertes8@gmail.com"
+						target="_blank"
+						class="block border border-white px-5 py-3 w-52 rounded-md text-center"
+						><i class="fa-regular fa-envelope"></i> Send me an email</a
+					>
+					<a
+						href="tel:+34658545912"
+						target="_blank"
+						class="block border border-white px-5 py-3 w-52 rounded-md text-center"
+						><i class="fa-solid fa-phone"></i> Call me</a
+					>
+				</div>
 			</div>
 		</div>
 	</main>

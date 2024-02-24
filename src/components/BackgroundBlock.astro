@@ -9,6 +9,10 @@ interface Props {
     secondBlockDescription: string;
     secondBlockLocation: string;
     secondBLockDate: string;
+    ThirdBlockTitle: string;
+    ThirdBlockDescription: string;
+    ThirdBlockLocation: string;
+    ThirdBLockDate: string;
 }
 
 const {
@@ -21,11 +25,15 @@ const {
     secondBlockDescription,
     secondBlockLocation,
     secondBLockDate,
+    ThirdBlockTitle,
+    ThirdBlockDescription,
+    ThirdBlockLocation,
+    ThirdBLockDate,
 } = Astro.props;
 ---
 
-<div class="md:w-[800px] w-full rounded-xl bg-gray-100 p-7 border">
-    <h2 class="text-xl font-semibold mb-4">{title}</h2>
+<div class="w-full rounded-xl text-black border-blue-950">
+    <h2 class="text-xl mb-4">{title}</h2>
     <div class="flex md:flex-row flex-col gap-10">
         <div class="flex-1 flex flex-col justify-between md:mb-0 mb-7">
             <h3 class="mb-3 font-medium">{firstBlockTitle}</h3>
@@ -53,6 +61,20 @@ const {
             <p class="text-sm italic">
                 <i class="fa-solid fa-calendar-days"></i>
                 {secondBLockDate}
+            </p>
+        </div>
+        <div class="flex-1 flex flex-col">
+            <h3 class="mb-3 font-medium">{ThirdBlockTitle}</h3>
+            <p class="md:mb-10 mb-3 text-sm font-light leading-relaxed">
+                {ThirdBlockDescription}
+            </p>
+            <p class="text-sm italic mb-2">
+                <i class="fa-solid fa-location-dot"></i>
+                {ThirdBlockLocation}
+            </p>
+            <p class="text-sm italic">
+                <i class="fa-solid fa-calendar-days"></i>
+                {ThirdBLockDate}
             </p>
         </div>
     </div>

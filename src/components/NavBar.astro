@@ -1,21 +1,13 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-
-interface Props {
-    active1: boolean;
-    active2: boolean;
-    active3: boolean;
-}
-
-const { active1, active2, active3 } = Astro.props;
 ---
 
 <ul
-    class="flex md:gap-16 gap-2 w-full justify-center md:justify-start text-lg mb-10"
+    class="flex md:gap-16 gap-2 w-full justify-center text-lg p-10 bg-slate-800 text-yellow-50"
 >
-    <li><HeaderLink active={active1} href="/">Projects</HeaderLink></li>
+    <li><HeaderLink href="#projects">Projects</HeaderLink></li>
     <li>
-        <HeaderLink active={active2} href="/background">Background</HeaderLink>
+        <HeaderLink href="#background">Background</HeaderLink>
     </li>
-    <li><HeaderLink active={active3} href="/contact">Contact</HeaderLink></li>
+    <li><HeaderLink href="#contact">Contact</HeaderLink></li>
 </ul>
